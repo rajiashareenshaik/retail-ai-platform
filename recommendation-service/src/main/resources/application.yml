@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: recommendation-service
+server:
+  port: 8084
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+logging:
+  level:
+    root: INFO
+    com.retail.ai.recommendation.service: DEBUG
+

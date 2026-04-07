@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: event-tracker-service
+server:
+  port: 8081
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+logging:
+  level:
+    root: INFO
+    com.retail.ai.event.tracker.service: DEBUG
+
+app:
+  kafka:
+    user-events-topic: user-events
+

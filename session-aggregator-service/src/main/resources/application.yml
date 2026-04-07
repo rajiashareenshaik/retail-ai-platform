@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: session-aggregator-service
+  kafka:
+    consumer:
+      group-id: session-aggregator
+      auto-offset-reset: earliest
+server:
+  port: 8082
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+logging:
+  level:
+    root: INFO
+    com.retail.ai.session.aggregator.service: DEBUG
+app:
+  kafka:
+    user-events-topic: user-events
+    session-features-topic: session-features
